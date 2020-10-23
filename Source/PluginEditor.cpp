@@ -31,13 +31,10 @@ void VolumeControlAudioProcessorEditor::paint (juce::Graphics& g)
     // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
 
-    g.setColour (juce::Colours::white);
-    g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
 }
 
 void VolumeControlAudioProcessorEditor::resized()
 {
-    gainSlider.setBounds(getWidth() / 2, getHeight() / 2, 200, 200);
+    gainSlider.setBounds(getWidth() / 2 - 200, getHeight() / 2 -100, 200, 200);
 
 }
